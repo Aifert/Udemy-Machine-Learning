@@ -15,16 +15,19 @@
 # random_forest()
 # support()
 
-x = int(input("input something: "))
-first_number , second_number = 0, 1
-result = 0
-new_result = 0
-for i in range(0, x-1):
-    result = first_number + second_number
-    new_result += result
-    #Odd
-    if(i % 2 != 0):
-        first_number = result
-    else:
-        second_number = result
-print(new_result)
+def is_leap(year):
+    if(year % 4 == 0):
+        if(year % 100 == 0):
+            if(year % 400 == 0):
+                return True
+            return False
+        return True
+    return False
+
+def print_leap(start_year, end_year):
+    for year in range(start_year, end_year + 1):
+        if(is_leap(year)):
+            print(year)
+        
+
+print_leap(2000, 2020)
