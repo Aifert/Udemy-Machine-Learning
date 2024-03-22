@@ -14,20 +14,3 @@
 # naive()
 # random_forest()
 # support()
-
-def is_leap(year):
-    if(year % 4 == 0):
-        if(year % 100 == 0):
-            if(year % 400 == 0):
-                return True
-            return False
-        return True
-    return False
-
-def print_leap(start_year, end_year):
-    for year in range(start_year, end_year + 1):
-        if(is_leap(year)):
-            print(year)
-        
-
-print_leap(2000, 2020)
